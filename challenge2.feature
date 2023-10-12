@@ -1,13 +1,11 @@
 Feature: Checkout
 
-    Background:
+    @checkout @positive
+    Scenario Outline: User checkout with <PaymentMethod> and <DeliveryMethod>
         Given User is on BinarMart homepage
         When User input email using "test@gmail.com"
         And User input password using "password123"
         Then User should be on the BinarMart homepage
-
-    @checkout @positive
-    Scenario Outline: User checkout with <PaymentMethod> and <DeliveryMethod>
         When User click add to Cart button on item "Susu Bendera"
         And User click Shopping Cart icon in the top right corner
         And User modify "Susu Bendera" item become "3"
