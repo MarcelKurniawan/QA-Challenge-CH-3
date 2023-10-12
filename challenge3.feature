@@ -25,5 +25,5 @@ Feature: Shopping in BinarMart
         And User selects a transaction to cancel
         And User clicks cancel transaction button
         And User confirms the cancellation
-        Then User should see success message
+        Then User should see success message with content "Success: Your transaction has been canceled"
         And The selected transaction should be marked as cancelled
